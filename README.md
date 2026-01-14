@@ -77,7 +77,7 @@ print(f"Retrieved IDs: {result['ids']}")
 ```
 
 🔬 Engineering Insights: Why K=256? (The Sweet Spot)
-Through extensive parameter sweeping, we identified $K=256$ as the inflection point where semantic resolution maximizes before the routing layer becomes unnecessarily large. Increasing $K$ beyond 256 yields diminishing returns on Recall@10 while linearly increasing the routing layer size.Static vs. Adaptive RoutingOur drift benchmarks (benchmarks/drift_benchmark.py) revealed a counter-intuitive insight: Static routing is often safer.Under strict candidate budgets, naive online updates cause "bucket collapse" (centroids migrating into dense clusters), reducing recall. Static high-dimensional Voronoi cells provide better long-term stability.
+Through extensive parameter sweeping, we identified $K=256$ as the inflection point where semantic resolution maximizes before the routing layer becomes unnecessarily large. Increasing $K$ beyond 256 yields diminishing returns on Recall@10 while linearly increasing the routing layer size. Static vs. Adaptive Routing. Our drift benchmarks (benchmarks/drift_benchmark.py) revealed a counter-intuitive insight: Static routing is often safer.Under strict candidate budgets, naive online updates cause "bucket collapse" (centroids migrating into dense clusters), reducing recall. Static high-dimensional Voronoi cells provide better long-term stability.
 
 🧪 Reproducibility
 The repository includes a comprehensive benchmark suite.
